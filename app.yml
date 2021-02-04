@@ -22,7 +22,7 @@ default_events:
   # - deployment_status
   # - fork
   # - gollum
-  # - issue_comment
+  - issue_comment
   - issues
 # - label
 # - milestone
@@ -62,7 +62,7 @@ default_permissions:
 
   # Repository contents, commits, branches, downloads, releases, and merges.
   # https://developer.github.com/v3/apps/permissions/#permission-on-contents
-  # contents: read
+  contents: write
 
   # Deployments and deployment statuses.
   # https://developer.github.com/v3/apps/permissions/#permission-on-deployments
@@ -74,7 +74,7 @@ default_permissions:
 
   # Search repositories, list collaborators, and access repository metadata.
   # https://developer.github.com/v3/apps/permissions/#metadata-permissions
-  metadata: read
+  metadata: write
 
   # Retrieve Pages statuses, configuration, and builds, as well as create new builds.
   # https://developer.github.com/v3/apps/permissions/#permission-on-pages
@@ -82,15 +82,15 @@ default_permissions:
 
   # Pull requests and related comments, assignees, labels, milestones, and merges.
   # https://developer.github.com/v3/apps/permissions/#permission-on-pull-requests
-  # pull_requests: read
+  pull_requests: write
 
   # Manage the post-receive hooks for a repository.
   # https://developer.github.com/v3/apps/permissions/#permission-on-repository-hooks
-  # repository_hooks: read
+  repository_hooks: write
 
   # Manage repository projects, columns, and cards.
   # https://developer.github.com/v3/apps/permissions/#permission-on-repository-projects
-  # repository_projects: read
+  repository_projects: write
 
   # Retrieve security vulnerability alerts.
   # https://developer.github.com/v4/object/repositoryvulnerabilityalert/
@@ -98,7 +98,7 @@ default_permissions:
 
   # Commit statuses.
   # https://developer.github.com/v3/apps/permissions/#permission-on-statuses
-  # statuses: read
+  statuses: write
 
   # Organization members and teams.
   # https://developer.github.com/v3/apps/permissions/#permission-on-members
@@ -122,7 +122,7 @@ default_permissions:
 
   # Get notified of, and update, content references.
   # https://developer.github.com/v3/apps/permissions/
-  # organization_administration: read
+  organization_administration: write
 # The name of the GitHub App. Defaults to the name specified in package.json
 # name: My Probot App
 
@@ -134,4 +134,4 @@ default_permissions:
 
 # Set to true when your GitHub App is available to the public or false when it is only accessible to the owner of the app.
 # Default: true
-# public: false
+public: false
